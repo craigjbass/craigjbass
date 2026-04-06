@@ -6,7 +6,7 @@ I’m Craig. I tackle hard problems with software. I also attend video calls.
 
 Principal Software Engineer at [Made Tech](https://www.madetech.com), where I’ve spent the better part of a decade helping public sector organisations sort out their technology. Currently focussed on security engineering.
 
-On the side, I’m building macOS endpoint security tooling with Apple’s Endpoint Security framework — process ancestry tracking, behavioural profiling for file access authorization, and the kind of problems where PID recycling keeps you up at night.
+On the side, I’m building macOS endpoint security tooling with Apple’s Endpoint Security framework.
 
 ## Previously
 

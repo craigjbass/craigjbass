@@ -1,0 +1,20 @@
+title: Craig J. Bass
+description: Personal site of Craig Bass.
+url: https://craigbass.uk
+
+permalink: /:path/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+
+include:
+  - .well-known

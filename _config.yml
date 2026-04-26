@@ -1,20 +1,30 @@
 title: Craig J. Bass
-description: Personal site of Craig Bass.
-url: https://craigbass.uk
+tagline: "Professional video call attendee."
+description: >-
+  Principal engineer at Made Tech. A decade of public-sector technology.
+  On the side, macOS endpoint security tooling.
+author: Craig J. Bass
+url: "https://craigbass.uk"
 
-permalink: /:path/
+# Social / elsewhere
+social:
+  github: craigjbass
+  bluesky: craigjbass.bsky.social
 
+# Build
+permalink: /:title/
 markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
+highlighter: rouge
 
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
+  - README.md
   - vendor
+  - _design
   - .github
+  - .bundle
 
-include:
-  - .well-known
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

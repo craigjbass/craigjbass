@@ -1,0 +1,74 @@
+<div class="hero">
+  <div>
+    <div class="meta-row">
+      <span class="chip solid">Available · ish</span>
+      <span class="chip">Public sector</span>
+      <span class="chip accent">Security engineering</span>
+    </div>
+    <h1 class="title">HI, I'M<br/>CRAIG.<br/><span class="strike">A SOFTWARE ENGINEER.</span><br/><span class="hl">VIDEO CALL ATTENDEE.</span></h1>
+    <p class="deck">Principal engineer at <b>Made Tech</b>. A decade of public-sector technology. On the side: macOS endpoint security tooling.</p>
+  </div>
+  <div class="portrait has-image" style="--portrait-image: url('{{ '/assets/img/portrait.jpg' | relative_url }}')">
+    <div class="corner">×</div>
+    <div class="lab"><span>PORTRAIT.JPG</span><span>895×881</span></div>
+  </div>
+</div>
+
+<div class="ticker">
+  {%- for t in site.data.ticker -%}
+  <div><div class="n">{{ t.n }}</div><div class="l">{{ t.l }}</div></div>
+  {%- endfor -%}
+</div>
+
+<section class="sec">
+  <div class="sec-label">01 / Projects</div>
+  <h2>Things I’m <em>doing</em> when the calls end.</h2>
+  <div class="grid-projects">
+    {%- for p in site.data.projects -%}
+    {%- if p.href -%}{%- assign ext = false -%}{%- if p.href contains "://" -%}{%- assign ext = true -%}{%- endif -%}<a class="gp gp-link{% if p.status %} gp-{{ p.status }}{% endif %}" href="{{ p.href | relative_url }}"{% if ext %} target="_blank" rel="noopener"{% endif %}>{%- else -%}<div class="gp{% if p.status %} gp-{{ p.status }}{% endif %}">{%- endif -%}
+      <div class="num"><span>{{ p.num }}</span><span>{{ p.tag | upcase }}</span></div>
+      {%- if p.status -%}
+      <span class="status status-{{ p.status }}">{{ p.status_label | default: p.status | upcase }}</span>
+      {%- endif -%}
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.body }}</p>
+    {%- if p.href -%}</a>{%- else -%}</div>{%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-label">02 / Speaking, training and workshops</div>
+  <h2>Talks <em>given</em>, in front of varying numbers of people.</h2>
+  <ul class="talks">
+    {%- for t in site.data.talks -%}
+    <li>
+      <span class="what">{{ t.title }}</span>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="sec">
+  <div class="sec-label">03 / Music</div>
+  <h2>For when there are <em>no more calls.</em></h2>
+  <div class="music">
+    {%- for m in site.data.music -%}
+    <a class="tr" href="{{ m.href }}" target="_blank" rel="noopener">
+      <div class="num">{{ m.num }}</div>
+      <h3>{{ m.title }}</h3>
+      <div class="meta">{{ m.meta }}</div>
+      <div class="play"><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M0 0L10 5L0 10z"/></svg> Play</div>
+    </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+<div class="contact">
+  <h2>SAY<br/>HI <span class="arrow">→</span></h2>
+  <div class="links">
+    {%- for l in site.data.links -%}
+    <a href="{{ l.href }}">{{ l.label }} <span class="h">{{ l.hint }}</span></a>
+    {%- endfor -%}
+  </div>
+</div>

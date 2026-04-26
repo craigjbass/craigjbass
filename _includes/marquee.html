@@ -1,0 +1,9 @@
+<div class="marquee">
+  <div class="marquee-track">
+    {%- for i in (1..2) -%}
+      {%- for item in site.data.marquee -%}
+        <span class="item">{{ item.text }} <span class="dot">●</span></span>
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
